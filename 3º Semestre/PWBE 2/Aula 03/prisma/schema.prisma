@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model carros {
+  id Int @id @default(autoincrement())
+  placa String@unique
+  marca String
+  modelo String
+  ano Int
+
+}
+
+model clientes {
+  id Int @id @default(autoincrement())
+  nome String 
+  CPF Int
+  email String@unique
+  CNH String
+}
